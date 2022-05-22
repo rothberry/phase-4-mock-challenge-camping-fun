@@ -57,7 +57,7 @@ RSpec.describe "Activities", type: :request do
         delete "/activities/bad_id"
 
         expect(response.body).to include_json({
-          error: "Activity not found"
+          error: "Couldn't find Activity with 'id'=bad_id"
         })
       end
       
